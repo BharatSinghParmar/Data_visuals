@@ -1,6 +1,17 @@
+# Data and outputs
+data.csv/
+bokeh_files/
+visuals_city_data/
+*.csv
+*.html
+
+# Python
 __pycache__/
 *.py[cod]
+*.ipynb_checkpoints/
+
+# Environment
 venv/
-*.env
-*.sqlite
-.DS_Store
+.env
+
+
