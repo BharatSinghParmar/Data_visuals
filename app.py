@@ -72,3 +72,16 @@ from flask_frozen import Freezer
 if __name__ == '__main__':
     freezer = Freezer(app)
     freezer.freeze()  # This will generate static files in a 'build' folder
+
+from flask_frozen import Freezer
+import sys  # Add this import at the top of your file if not already present
+
+# ... (your existing Flask code remains unchanged) ...
+
+if __name__ == '__main__':
+    if 'freeze' in sys.argv:
+        freezer = Freezer(app)
+        freezer.freeze()  # Generate static files
+        print("Static files generated in 'build' folder")
+    else:
+        app.run(debug=True)  # Normal Flask development server
