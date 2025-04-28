@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City Data Visualization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background: url('/static/index_dv.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Visualization of Cities</h1>
+        <h2>2m Temperature</h2>
+        <h2>Surface Pressure</h2>
+        <button onclick="window.location.href='/select_city'">Select City</button>
+    </div>
+</body>
+</html>
+

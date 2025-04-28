@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Plot Type</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background: url('/static/choice.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function showPlotOptions() {
+            document.getElementById('plot-modal').style.display = 'flex';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Plot Type for {{ city }}</h1>
+        <button class="plot-button" onclick="showPlotOptions()">Types of Plot</button>
+    </div>
+    <div id="plot-modal" class="modal">
+        <div class="modal-content">
+            <form method="post">
+                <button class="modal-button" name="plot_type" value="scatter">Scatter Plot</button>
+                <button class="modal-button" name="plot_type" value="line">Line Plot</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
