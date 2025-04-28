@@ -65,3 +65,10 @@ def show_line_plot(city):
 
 if __name__ == '__main__':
     app.run(debug=True)
+from flask_frozen import Freezer
+
+# ... your existing Flask code ...
+
+if __name__ == '__main__':
+    freezer = Freezer(app)
+    freezer.freeze()  # This will generate static files in a 'build' folder
